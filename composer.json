@@ -1,0 +1,25 @@
+{
+    "name": "zing-studios/textract",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "James Haynes",
+            "email": "james@zingstudios.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "ZingStudios\\Textract\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ZingStudios\\Textract\\Tests\\": "tests/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "fakerphp/faker": "^1.21"
+    }
+}
