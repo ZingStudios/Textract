@@ -15,4 +15,6 @@ enum BlockType: string
     case SIGNATURE = 'SIGNATURE';
     case QUERY = 'QUERY';
     case QUERY_RESULT = 'QUERY_RESULT';
+    case TABLE_TITLE = 'TABLE_TITLE';
+    
 }

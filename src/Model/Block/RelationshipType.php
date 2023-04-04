@@ -10,4 +10,5 @@ enum RelationshipType: string
     case MERGED_CELL = 'MERGED_CELL';
     case TITLE = 'TITLE';
     case ANSWER = 'ANSWER';
+    case TABLE_TITLE = 'TABLE_TITLE';
 }

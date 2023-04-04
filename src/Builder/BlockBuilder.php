@@ -14,6 +14,7 @@ use ZingStudios\Textract\Factory\Block\QueryResultFactory;
 use ZingStudios\Textract\Factory\Block\SelectionElementFactory;
 use ZingStudios\Textract\Factory\Block\SignatureFactory;
 use ZingStudios\Textract\Factory\Block\TableFactory;
+use ZingStudios\Textract\Factory\Block\TableTitleFactory;
 use ZingStudios\Textract\Factory\Block\WordFactory;
 use ZingStudios\Textract\Factory\Geometry\GeometryFactory;
 use ZingStudios\Textract\Factory\Geometry\GeometryFactoryInterface;
@@ -81,6 +82,8 @@ class BlockBuilder implements BlockBuilderInterface
                 return new QueryFactory($this->geometryFactory);
             case BlockType::QUERY_RESULT:
                 return new QueryResultFactory($this->geometryFactory);
+            case BlockType::TABLE_TITLE:
+                return new TableTitleFactory($this->geometryFactory);
         }
 
         throw new \RuntimeException('Unknown block type: ' . $blockType->value);
