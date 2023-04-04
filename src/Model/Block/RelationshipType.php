@@ -11,4 +11,5 @@ enum RelationshipType: string
     case TITLE = 'TITLE';
     case ANSWER = 'ANSWER';
     case TABLE_TITLE = 'TABLE_TITLE';
+    case TABLE_FOOTER = 'TABLE_FOOTER';
 }

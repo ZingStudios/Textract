@@ -16,5 +16,7 @@ enum BlockType: string
     case QUERY = 'QUERY';
     case QUERY_RESULT = 'QUERY_RESULT';
     case TABLE_TITLE = 'TABLE_TITLE';
-    
+    case TABLE_FOOTER = 'TABLE_FOOTER';
+
+
 }
