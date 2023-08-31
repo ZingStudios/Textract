@@ -27,4 +27,22 @@ class Page extends AbstractBlock
         return $keyValueSets;
     }
 
+
+    /**
+     * Returns an array of the text of all the lines on the page
+     * @return array<int, string>
+     */
+    public function getAllLineText(): array
+    {
+        $lines = [];
+
+        foreach ($this->getChildren(RelationshipType::CHILD) as $child) {
+            if ($child instanceof Line) {
+                $lines[] = $child->getText();
+            }
+        }
+
+        return $lines;
+    }
+
 }
