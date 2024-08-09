@@ -11,7 +11,7 @@ class Query extends AbstractBlock implements HasTextInterface
 
     public function __construct(
         string $id,
-        Geometry $geometry,
+        ?Geometry $geometry,
         string $alias,
         string $text
     ) {

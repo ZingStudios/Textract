@@ -7,12 +7,12 @@ use ZingStudios\Textract\Model\Geometry\Geometry;
 abstract class AbstractBlock implements BlockInterface
 {
     private string $id;
-    private Geometry $geometry;
+    private ?Geometry $geometry;
 
     private array $children = [];
     private array $parents = [];
 
-    public function __construct(string $id, Geometry $geometry)
+    public function __construct(string $id, ?Geometry $geometry)
     {
         $this->id = $id;
         $this->geometry = $geometry;
@@ -27,9 +27,9 @@ abstract class AbstractBlock implements BlockInterface
     }
 
     /**
-     * @return Geometry
+     * @return ?Geometry
      */
-    public function getGeometry(): Geometry
+    public function getGeometry(): ?Geometry
     {
         return $this->geometry;
     }

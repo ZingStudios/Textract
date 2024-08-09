@@ -47,13 +47,13 @@ class QueryResultFactoryTest extends AbstractBaseTest
             ->willReturn($geometryStub);
 
         $id = $faker->uuid();
-        $alias = $faker->word();
+        $text = $faker->word();
 
         $blockData =
             [
                 'Id' => $id,
                 'Geometry' => $geometryData,
-                'Alias' => $alias,
+                'Text' => $text,
             ];
 
 
@@ -63,6 +63,6 @@ class QueryResultFactoryTest extends AbstractBaseTest
 
         $this->assertEquals($id, $block->getId());
         $this->assertSame($geometryStub, $block->getGeometry());
-        $this->assertSame($alias, $block->getAlias());
+        $this->assertSame($text, $block->getText());
     }
 }

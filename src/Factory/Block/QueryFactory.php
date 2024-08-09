@@ -10,9 +10,9 @@ class QueryFactory extends AbstractBlockFactory implements QueryFactoryInterface
     {
         return new Query(
             $data['Id'],
-            $this->getGeometryFactory()->build($data['Geometry']),
-            $data['Alias'],
-            $data['Text']
+             array_key_exists('Geometry', $data) ? $this->getGeometryFactory()->build($data['Geometry']) : null,
+            $data['Query']['Alias'],
+            $data['Query']['Text']
         );
     }
 }

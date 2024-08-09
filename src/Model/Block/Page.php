@@ -27,6 +27,19 @@ class Page extends AbstractBlock
         return $keyValueSets;
     }
 
+    public function getQueries(): array
+    {
+        $queries = [];
+
+        foreach ($this->getChildren(RelationshipType::CHILD) as $child) {
+            if ($child instanceof Query) {
+                $queries[] = $child;
+            }
+        }
+
+        return $queries;
+    }
+
 
     /**
      * Returns an array of the text of all the lines on the page

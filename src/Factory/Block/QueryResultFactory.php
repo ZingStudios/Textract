@@ -11,7 +11,7 @@ class QueryResultFactory extends AbstractBlockFactory implements QueryResultFact
         return new QueryResult(
             $data['Id'],
             $this->getGeometryFactory()->build($data['Geometry']),
-            $data['Alias']
+            $data['Text']
         );
     }
 }

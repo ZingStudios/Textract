@@ -187,8 +187,10 @@ class BlockBuilderTest extends AbstractBaseTest
                     'BlockType' => BlockType::QUERY->value,
                     'Id' => $faker->uuid(),
                     'Geometry' => $this->createTestGeometryData(),
-                    'Alias' => $faker->word(),
-                    'Text' => $faker->sentence()
+                    'Query' => [
+                        'Alias' => $faker->word(),
+                        'Text' => $faker->sentence()
+                    ],
                 ]
             ],
             [
@@ -198,7 +200,7 @@ class BlockBuilderTest extends AbstractBaseTest
                     'BlockType' => BlockType::QUERY_RESULT->value,
                     'Id' => $faker->uuid(),
                     'Geometry' => $this->createTestGeometryData(),
-                    'Alias' => $faker->word(),
+                    'Text' => $faker->word(),
                 ]
             ],
         ];

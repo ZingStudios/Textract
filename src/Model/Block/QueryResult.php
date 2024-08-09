@@ -4,17 +4,17 @@ namespace ZingStudios\Textract\Model\Block;
 
 use ZingStudios\Textract\Model\Geometry\Geometry;
 
-class QueryResult extends AbstractBlock
+class QueryResult extends AbstractBlock implements HasTextInterface
 {
-    private string $alias;
+    private string $text;
 
     public function __construct(
         string $id,
         Geometry $geometry,
-        string $alias
+        string $text
     ) {
         parent::__construct($id, $geometry);
-        $this->alias = $alias;
+        $this->text = $text;
     }
 
     public function getBlockType(): BlockType
@@ -25,8 +25,8 @@ class QueryResult extends AbstractBlock
     /**
      * @return string
      */
-    public function getAlias(): string
+    public function getText(): string
     {
-        return $this->alias;
+        return $this->text;
     }
 }

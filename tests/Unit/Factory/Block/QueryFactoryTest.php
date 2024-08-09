@@ -53,8 +53,10 @@ class QueryFactoryTest extends AbstractBaseTest
             [
                 'Id' => $id,
                 'Geometry' => $geometryData,
-                'Alias' => $alias,
-                'Text' => $text
+                'Query' => [
+                    'Alias' => $alias,
+                    'Text' => $text
+                ]
             ];
 
 
