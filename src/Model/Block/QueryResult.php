@@ -10,7 +10,7 @@ class QueryResult extends AbstractBlock implements HasTextInterface
 
     public function __construct(
         string $id,
-        Geometry $geometry,
+        ?Geometry $geometry,
         string $text
     ) {
         parent::__construct($id, $geometry);
